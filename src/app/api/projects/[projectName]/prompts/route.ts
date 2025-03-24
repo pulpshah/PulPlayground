@@ -68,8 +68,6 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ proj
       };
     });
 
-    console.log(prompts[0].versions[0].createdAt);
-
     await session.close();
     return NextResponse.json({ prompts });
   } catch (error) {
